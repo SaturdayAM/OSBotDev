@@ -1,11 +1,16 @@
 import org.osbot.rs07.api.map.Position;
 import org.osbot.rs07.api.map.Area;
+import org.osbot.rs07.api.EntityAPI;
 import org.osbot.rs07.api.map.constants.Banks;
+import org.osbot.rs07.api.model.Entity;
 import org.osbot.rs07.api.ui.RS2Widget;
 import org.osbot.rs07.script.MethodProvider;
 import org.osbot.rs07.script.Script;
 import org.osbot.rs07.script.ScriptManifest;
 import org.osbot.rs07.utility.ConditionalSleep;
+import org.osbot.rs07.api.Combat;
+import org.osbot.rs07.api.model.NPC;
+import org.osbot.rs07.api.model.Player;
 
 
 import java.util.function.BooleanSupplier;
@@ -35,10 +40,16 @@ public final class Woodcutter extends Script {
         log("Logged on start");
     }
 
+    private enum State { //Declare states
+        KILL, SLEEP;
+    }
+
+    private State getState(){ //returns the state
+        NPC
+    }
 
     @Override
     public final int onLoop() throws InterruptedException { //core loop for running script
-
 
         //Player position
         Position playerPos = myPosition();
@@ -50,7 +61,12 @@ public final class Woodcutter extends Script {
         Area chickenCoop = new Area(3172, 3290, 3183, 3302);
 
         if(chickenCoop.contains(playerPos)){ //if in coop
-            log("in coop")
+            log("in coop");
+            //get instance of NPCs
+            Entity chicken = getNpcs().closest("Chicken");
+            if(chicken != null && !Combat.isFighting()){
+                chicken.interact("Attack");
+            }
         } else{
             getWalking().walk(coopCenter);
         }
