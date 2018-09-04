@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="cow_slayer" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3d76c550-089b-4fa7-bac1-373d571c12a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../SeagullSlayer/.idea/artifacts/seagull_slaying_script.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/.idea/artifacts/cow_slaying_script.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/.idea/libraries/OSBot_2_5_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/SeagullSlayingScript.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/out/production/CowSlayingScript/SeagullSlayer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/out/production/CowSlayingScript/SeagullSlayer$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/out/production/CowSlayingScript/SeagullSlayer$State.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/out/production/CowSlayingScript/SeagullSlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CowSlayingScript/src/SeagullSlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InitialBot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../InitialBot/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InitialBot/out/production/OSBotDev/Woodcutter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InitialBot/out/production/OSBotDev/Woodcutter$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InitialBot/out/production/OSBotDev/Woodcutter$State.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InitialBot/out/production/OSBotDev/Woodcutter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/cow_slayer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/cow_slayer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,10 +25,69 @@
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="158" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="158" />
+        </counts>
+      </usages-collector>
     </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CowSlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1232#1233#0" expanded="true" />
+                <element signature="e#1295#1296#0" expanded="true" />
+                <element signature="e#3606#3607#0" expanded="true" />
+                <element signature="e#3643#3644#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>seagull</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/CowSlayer.java" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1440" />
@@ -49,7 +95,9 @@
     <option name="width" value="1920" />
     <option name="height" value="1057" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -62,6 +110,11 @@
               <item name="CowSlayer" type="b2602c69:ProjectViewProjectNode" />
               <item name="CowSlayer" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CowSlayer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CowSlayer" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -72,7 +125,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
@@ -102,6 +155,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-157" width="1920" height="1057" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="UI Designer" />
@@ -111,6 +165,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -129,6 +184,22 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/CowSlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1232#1233#0" expanded="true" />
+            <element signature="e#1295#1296#0" expanded="true" />
+            <element signature="e#3606#3607#0" expanded="true" />
+            <element signature="e#3643#3644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
@@ -140,6 +211,66 @@
               <list>
                 <option value="0.2" />
                 <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CowSlayer</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>OSBot_2.5.18</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
