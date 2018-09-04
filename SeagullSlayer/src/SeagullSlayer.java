@@ -108,6 +108,10 @@ public final class SeagullSlayer extends Script {
             getWalking().walk(coopCenter);
         }
 
+        //If leveled up, continue
+        if(dialogues.inDialogue()){
+            dialogues.clickContinue();
+        }
 
         return random(500, 1000); //the return value is the time between each onLoop call, in ms
     }

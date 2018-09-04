@@ -1,8 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="cow_slaying_script">
+  <artifact type="jar" name="seagull_slaying_script">
     <output-path>$USER_HOME$/OSBot/Scripts</output-path>
-    <root id="archive" name="cow_slaying_script.jar">
-      <element id="module-output" name="CowSlayingScript" />
+    <root id="archive" name="seagull_slaying_script.jar">
+      <element id="module-output" name="SeagullSlayingScript" />
       <element id="library" level="project" name="OSBot_2.5.18" />
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />

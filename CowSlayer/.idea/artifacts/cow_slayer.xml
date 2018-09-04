@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="cow_slayer">
+    <output-path>$PROJECT_DIR$/out/artifacts/cow_slayer</output-path>
+    <root id="archive" name="cow_slayer.jar">
+      <element id="module-output" name="CowSlayer" />
+      <element id="library" level="project" name="OSBot_2.5.18" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
