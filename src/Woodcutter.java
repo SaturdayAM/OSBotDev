@@ -19,7 +19,7 @@ import java.util.function.BooleanSupplier;
 /*
     ScriptManifest annotation: required by main class to feed data to OSBot script selector.
  */
-@ScriptManifest(author = "CaptFalcon", name="Woodcutting Script", info="A beginner script", version = 0.1,
+@ScriptManifest(author = "CaptFalcon", name="Chicken Slayer", info="A beginner script", version = 0.1,
                 logo= "https://png.icons8.com/color/180/runescape.png")
 
 //Docs at:

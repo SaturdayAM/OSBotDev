@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="ChickenSlayer101">
-    <output-path>$USER_HOME$/OSBot/Scripts</output-path>
-    <root id="archive" name="ChickenSlayer101.jar" />
-  </artifact>
-</component>
