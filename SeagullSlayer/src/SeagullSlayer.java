@@ -67,6 +67,12 @@ public final class SeagullSlayer extends Script {
     public final int onLoop() throws InterruptedException { //core loop for running script
 
 
+
+        //If leveled up, continue
+        if(dialogues.inDialogue()){
+            dialogues.clickContinue();
+        }
+
         //Referrenced from: https://osbot.org/forum/topic/70292-vags-chicken-blaster-first-script-ever/?do=findComment&comment=803046
         if(myPlayer().getInteracting() != null){
             //If player is interacting, return to stop checking until out of combat
@@ -106,11 +112,6 @@ public final class SeagullSlayer extends Script {
 
         if(!seagullCoop.contains(playerPos)){ //if not in coop
             getWalking().walk(coopCenter);
-        }
-
-        //If leveled up, continue
-        if(dialogues.inDialogue()){
-            dialogues.clickContinue();
         }
 
         return random(500, 1000); //the return value is the time between each onLoop call, in ms
