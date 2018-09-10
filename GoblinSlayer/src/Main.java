@@ -17,7 +17,7 @@ public class Main extends Script {
     @Override
     public void onStart() throws InterruptedException {
         super.onStart();
-        log("Initializing script, with looting v 3.03");
+        log("Initializing script, with looting v 3.05");
     }
 
     @Override
@@ -82,26 +82,14 @@ public class Main extends Script {
                 //will keep looping until this returns true
                 //i.e. attacked goblin.
                 //Will stop sleeping between 2-3 seconds
-                return getCombat().isFighting();
+                return targetNpc.getHealthPercent() == 0;
             }
         }.sleep(); //call immediately, sleep
-
-        log("Killed chicken");
-
-
-        //Immediately sleep again after killing chicken
-        //Wait period after killing chicken for loot to appear
-        new ConditionalSleep(random(2000, 3000), 300){
-            @Override
-            public boolean condition(){
-                return false;
-            }
-        }.sleep();
 
 
         GroundItem toLoot = groundItems.closest("Feather");
 
-        if(toLoot != null && targetNpc.getHealthPercent() == 0){
+        if(!myPlayer().isUnderAttack()){
             toLoot.interact("Take");
             return random(1500, 2000);
 
