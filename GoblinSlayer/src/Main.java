@@ -17,7 +17,7 @@ public class Main extends Script {
     @Override
     public void onStart() throws InterruptedException {
         super.onStart();
-        log("Initializing script, with looting v 3.01");
+        log("Initializing script, with looting v 3.02");
     }
 
     @Override
@@ -99,9 +99,7 @@ public class Main extends Script {
         }.sleep();
 
 
-        GroundItem toLoot = groundItems.closest(obj -> obj.getName().equals(targetLoot) &&
-                                                       obj != null);
-
+        GroundItem toLoot = groundItems.closest("Feather");
 
         if(toLoot != null && !myPlayer().isUnderAttack()){
             toLoot.interact("Take");
