@@ -17,7 +17,7 @@ public class Main extends Script {
     @Override
     public void onStart() throws InterruptedException {
         super.onStart();
-        log("Initializing script, with looting v 3.05");
+        log("Initializing script, with looting v 3.08");
     }
 
     @Override
@@ -40,7 +40,7 @@ public class Main extends Script {
 //            }
 //        });
 
-        if(myPlayer().getInteracting() != null || getCombat().isFighting()){
+        if(myPlayer().getInteracting() != null || myPlayer().isUnderAttack()){
             //If interacting, return to stop checking until out of combat
             return random(500, 1000);
         }
@@ -71,20 +71,20 @@ public class Main extends Script {
         targetNpc.interact("Attack");
 
 
-        //ConditionalSleep(int timeout, int sleepTime)
-        //sleepTime between condition checks. Default 25ms.
-        //Most actions will need much more time, reduce CPU load by increasing
-        //sleepTime
-        int timeOut = random(2000, 3000);
-        new ConditionalSleep(timeOut, 100){
-            @Override
-            public boolean condition(){
-                //will keep looping until this returns true
-                //i.e. attacked goblin.
-                //Will stop sleeping between 2-3 seconds
-                return targetNpc.getHealthPercent() == 0;
-            }
-        }.sleep(); //call immediately, sleep
+//        //ConditionalSleep(int timeout, int sleepTime)
+//        //sleepTime between condition checks. Default 25ms.
+//        //Most actions will need much more time, reduce CPU load by increasing
+//        //sleepTime
+//        int timeOut = random(2000, 3000);
+//        new ConditionalSleep(timeOut, 100){
+//            @Override
+//            public boolean condition(){
+//                //will keep looping until this returns true
+//                //i.e. attacked goblin.
+//                //Will stop sleeping between 2-3 seconds
+//                return targetNpc.getHealthPercent() == 0;
+//            }
+//        }.sleep(); //call immediately, sleep
 
 
         GroundItem toLoot = groundItems.closest("Feather");
