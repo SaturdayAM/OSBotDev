@@ -13,6 +13,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
+//Class for handling first guide upon character creation
 public final class RunescapeGuideSection extends TutorialSection {
 
     private final CachedWidget CREATION_SCREEN_WIDGET = new CachedWidget("Welcome to RuneScape");
