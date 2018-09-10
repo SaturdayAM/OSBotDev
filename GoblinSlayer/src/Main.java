@@ -1,5 +1,7 @@
 import org.osbot.rs07.api.filter.Filter;
+import org.osbot.rs07.api.model.GroundItem;
 import org.osbot.rs07.api.model.NPC;
+import org.osbot.rs07.api.model.RS2Object;
 import org.osbot.rs07.script.Script;
 import org.osbot.rs07.script.ScriptManifest;
 import org.osbot.rs07.utility.ConditionalSleep;
@@ -10,21 +12,19 @@ import java.awt.*;
 public class Main extends Script {
 
     private String targetName = "Chicken";
+    private String targetLoot = "Feather";
 
     @Override
     public void onStart() throws InterruptedException {
         super.onStart();
-        log("Initializing script");
+        log("Initializing script, with looting v 3.01");
     }
 
     @Override
     public int onLoop() throws InterruptedException {
 
-        if(getCombat().isFighting()){ //If we're fighting, loop
-            return random(500, 700);
-        }
 
-        //Select target npc to fight
+        //Select target npc to fight. Can use a filter or a lambda expression.
 
         //Using a filter
 
@@ -40,8 +40,12 @@ public class Main extends Script {
 //            }
 //        });
 
+        if(myPlayer().getInteracting() != null || getCombat().isFighting()){
+            //If interacting, return to stop checking until out of combat
+            return random(500, 1000);
+        }
 
-        //With lambda notation
+        //With lambda expression.
         NPC targetNpc = getNpcs().closest(npc -> npc != null &&
                                                  npc.getName().equals(targetName) &&
                                                  npc.exists() &&
@@ -49,36 +53,62 @@ public class Main extends Script {
                                                  npc.getHealthPercent() > 0 &&
                                                  npc.getInteracting() == null);
 
-        if(targetNpc != null){
-
-            if(!targetNpc.isVisible() ){ //Move camera to npc if needed, then pause
-                getCamera().toEntity(targetNpc);
-                new ConditionalSleep(random(300,500), 100){
-                    @Override
-                    public boolean condition(){
-                        return false;
-                    }
-                }.sleep();
-            }
-
-            if(targetNpc.interact("Attack")){ //If we've attacked it
-                //ConditionalSleep(int timeout, int sleepTime)
-                //sleepTime between condition checks. Default 25ms.
-                //Most actions will need much more time, reduce CPU load by increasing
-                //sleepTime
-                int timeOut = random(2000, 3000);
-                new ConditionalSleep(timeOut, 1000){
-                    @Override
-                    public boolean condition(){
-                        //will keep looping until this returns true
-                        //i.e. attacked goblin.
-                        //Will stop sleeping between 2-3 seconds
-                        return getCombat().isFighting();
-                    }
-                }.sleep(); //call immediately, sleep
-            }
+        if(targetNpc == null){ //If npc is null, wait for one to spawn
+            return random(500, 1000);
         }
-        return random(100, 300);
+
+
+        if(!targetNpc.isVisible() ){ //Move camera to npc if needed, then pause
+            getCamera().toEntity(targetNpc);
+            new ConditionalSleep(random(300,500), 100){
+                @Override
+                public boolean condition(){
+                    return false;
+                }
+            }.sleep();
+        }
+
+        targetNpc.interact("Attack");
+
+
+        //ConditionalSleep(int timeout, int sleepTime)
+        //sleepTime between condition checks. Default 25ms.
+        //Most actions will need much more time, reduce CPU load by increasing
+        //sleepTime
+        int timeOut = random(2000, 3000);
+        new ConditionalSleep(timeOut, 100){
+            @Override
+            public boolean condition(){
+                //will keep looping until this returns true
+                //i.e. attacked goblin.
+                //Will stop sleeping between 2-3 seconds
+                return getCombat().isFighting();
+            }
+        }.sleep(); //call immediately, sleep
+
+        log("Killed chicken");
+
+
+        //Immediately sleep again after killing chicken
+        //Wait period after killing chicken for loot to appear
+        new ConditionalSleep(random(2000, 3000), 300){
+            @Override
+            public boolean condition(){
+                return false;
+            }
+        }.sleep();
+
+
+        GroundItem toLoot = groundItems.closest(obj -> obj.getName().equals(targetLoot) &&
+                                                       obj != null);
+
+
+        if(toLoot != null && !myPlayer().isUnderAttack()){
+            toLoot.interact("Take");
+            return random(1500, 2000);
+
+        }
+        return random(500, 1000);
     }
 
 
