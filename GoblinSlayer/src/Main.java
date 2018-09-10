@@ -17,7 +17,7 @@ public class Main extends Script {
     @Override
     public void onStart() throws InterruptedException {
         super.onStart();
-        log("Initializing script, with looting v 3.02");
+        log("Initializing script, with looting v 3.03");
     }
 
     @Override
@@ -101,7 +101,7 @@ public class Main extends Script {
 
         GroundItem toLoot = groundItems.closest("Feather");
 
-        if(toLoot != null && !myPlayer().isUnderAttack()){
+        if(toLoot != null && targetNpc.getHealthPercent() == 0){
             toLoot.interact("Take");
             return random(1500, 2000);
 
