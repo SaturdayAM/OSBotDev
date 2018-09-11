@@ -1,4 +1,5 @@
 import org.osbot.rs07.api.filter.Filter;
+import org.osbot.rs07.api.map.Area;
 import org.osbot.rs07.api.model.GroundItem;
 import org.osbot.rs07.api.model.NPC;
 import org.osbot.rs07.api.model.RS2Object;
@@ -10,14 +11,17 @@ import java.awt.*;
 
 @ScriptManifest(name = "GoblinSlayer", info = "Kills lumbridge goblins", version =1.1 , logo ="" , author = "CaptFalcon")
 public class Main extends Script {
+    //Area spanning lumbridge chicken coop, x1y1, x2y2
+    private Area combatArea = new Area(3165, 3284, 3182, 3302);
 
     private String targetName = "Chicken";
     private String targetLoot = "Feather";
 
+
     @Override
     public void onStart() throws InterruptedException {
         super.onStart();
-        log("Initializing script, with looting v 3.08");
+        log("Initializing script, with looting v 3.09");
     }
 
     @Override
@@ -40,9 +44,15 @@ public class Main extends Script {
 //            }
 //        });
 
+
+
         if(myPlayer().getInteracting() != null || myPlayer().isUnderAttack()){
             //If interacting, return to stop checking until out of combat
             return random(500, 1000);
+        }
+
+        if(!combatArea.contains(myPosition()) && !combat.isFighting()){
+            getWalking().webWalk(combatArea);
         }
 
         //With lambda expression.
