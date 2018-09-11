@@ -3,7 +3,7 @@
     <output-path>$USER_HOME$/OSBot/Scripts</output-path>
     <root id="archive" name="GoblinSlayer.jar">
       <element id="module-output" name="GoblinSlayer" />
-      <element id="library" level="project" name="OSbot_2.5.19" />
+      <element id="library" level="project" name="OSBot_2.5.22" />
     </root>
   </artifact>
 </component>
