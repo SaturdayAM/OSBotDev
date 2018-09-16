@@ -27,6 +27,9 @@ public final class Tutorial_Island extends Script {
 
     @Override
     public void onStart() throws InterruptedException {
+        //MethodProvider.exchangeContext is used to create extensions to the API with full
+        //direct access to the OSBot 2 API.
+
         rsGuideSection.exchangeContext(getBot());
         survivalSection.exchangeContext(getBot());
         cookingSection.exchangeContext(getBot());
@@ -40,7 +43,8 @@ public final class Tutorial_Island extends Script {
 
     @Override
     public final int onLoop() throws InterruptedException {
-        if (isTutorialIslandCompleted()) {
+        if (isTutorialIslandCompleted()) { //Note, currently is true upon character creation screen, causing early exit
+
             stop(true);
             return 0;
         }
@@ -108,12 +112,14 @@ public final class Tutorial_Island extends Script {
 
     private int getTutorialSection() {
         //from osbot class MethodProvider
-        //
+        log("getTutorialSection()" + getConfigs().get(406));
         return getConfigs().get(406);
     }
 
     //Tutorial island completion status based on if status bar is present
     private boolean isTutorialIslandCompleted() {
+        log("isTutorialIslandCompleted()" +
+                (getWidgets().getWidgetContainingText("Tutorial Island Progress") == null));
         return getWidgets().getWidgetContainingText("Tutorial Island Progress") == null;
     }
 }

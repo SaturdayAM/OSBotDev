@@ -7,7 +7,8 @@ import utils.Sleep;
 
 import java.awt.event.KeyEvent;
 
-//Parent class for sections
+//Parent class for all the XXXXSection.java classes
+//
 public abstract class TutorialSection extends MethodProvider {
 
     private final String INSTRUCTOR_NAME;
@@ -43,11 +44,14 @@ public abstract class TutorialSection extends MethodProvider {
             return false;
         }
         if (continueWidget.getMessage().contains("Click here to continue")) {
-            getKeyboard().pressKey(KeyEvent.VK_SPACE);
-            Sleep.sleepUntil(() -> !continueWidget.isVisible(), 1000);
+            int noSpamClicks = random(2, 3);
+            for(int i = 0; i < noSpamClicks; i++){ //For loop to spam click dialogue in a human-like behavior
+                getKeyboard().pressKey(KeyEvent.VK_SPACE);
+            }
+            Sleep.sleepUntil(() -> !continueWidget.isVisible(), random(500, 1000));
             return true;
         } else if (continueWidget.interact()) {
-            Sleep.sleepUntil(() -> !continueWidget.isVisible(), 1000);
+            Sleep.sleepUntil(() -> !continueWidget.isVisible(), random(500, 1000));
             return true;
         }
         return false;
@@ -58,6 +62,6 @@ public abstract class TutorialSection extends MethodProvider {
                 widget -> widget.isVisible()
                         && (widget.getMessage().contains("Click here to continue")
                         || widget.getMessage().contains("Click to continue"))
-        );
+        ); //end getWidgets().singleFilter()
     }
 }
