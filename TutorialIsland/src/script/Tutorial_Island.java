@@ -11,10 +11,11 @@ import java.awt.*;
 //https://github.com/Explv/Tutorial-Island
 
 
-@ScriptManifest(author = "CaptFalcon", name = "Tutorial Island", info = "Completes Tutorial Island", version = 1.0, logo = "")
+@ScriptManifest(author = "CaptFalcon", name = "Tutorial Island", info = "Completes Tutorial Island", version = 1.1, logo = "")
 public final class Tutorial_Island extends Script {
+
     //CTRL + O to implement method overrides
-    private final TutorialSection rsGuideSection = new RunescapeGuideSection();
+    private final TutorialSection rsGuideSection = new RuneScapeGuideSection();
     private final TutorialSection survivalSection = new SurvivalSection();
     private final TutorialSection cookingSection = new CookingSection();
     private final TutorialSection questSection = new QuestSection();
@@ -44,7 +45,6 @@ public final class Tutorial_Island extends Script {
     @Override
     public final int onLoop() throws InterruptedException {
         if (isTutorialIslandCompleted()) { //Note, currently is true upon character creation screen, causing early exit
-
             stop(true);
             return 0;
         }
@@ -119,7 +119,7 @@ public final class Tutorial_Island extends Script {
     //Tutorial island completion status based on if status bar is present
     private boolean isTutorialIslandCompleted() {
         log("isTutorialIslandCompleted()" +
-                (getWidgets().getWidgetContainingText("Tutorial Island Progress") == null));
-        return getWidgets().getWidgetContainingText("Tutorial Island Progress") == null;
+                (getConfigs().get(281) == 1000 && myPlayer().isVisible()));
+        return getConfigs().get(281) == 1000 && myPlayer().isVisible();
     }
 }

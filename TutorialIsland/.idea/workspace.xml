@@ -7,18 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed3f3081-c249-474c-8cf2-f775926dc331" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Fisher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Fisher/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fisher/out/production/Fisher/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fisher/out/production/Fisher/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fisher/out/production/Fisher/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fisher/out/production/Fisher/Main$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fisher/out/production/Fisher/Main$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fisher/out/production/Fisher/Main$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fisher/out/production/Fisher/Main$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fisher/out/production/Fisher/Main$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fisher/out/production/Fisher/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fisher/out/production/Fisher/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fisher/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fisher/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Tutorial_Island.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Tutorial_Island.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/OSBot_2_5_22.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TutorialIsland.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TutorialIsland.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TutorialIsland/script/Tutorial_Island.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TutorialIsland/script/Tutorial_Island.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TutorialIsland/sections/TutorialSection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TutorialIsland/sections/TutorialSection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TutorialIsland/sections/RunescapeGuideSection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TutorialIsland/sections/RunescapeGuideSection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script/Tutorial_Island.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/script/Tutorial_Island.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sections/TutorialSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/TutorialSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/RunescapeGuideSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/RuneScapeGuideSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/SurvivalSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/SurvivalSection.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,33 +28,38 @@
     <session id="841799142">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="40" />
+          <entry key="class" value="2" />
+          <entry key="java" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="40" />
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1453" />
+          <entry key="java" value="3169" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1453" />
+          <entry key="JAVA" value="3169" />
         </counts>
       </usages-collector>
     </session>
@@ -67,11 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/script/Tutorial_Island.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="120" column="43" lean-forward="true" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
+            <state relative-caret-position="318">
+              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,32 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/Sleep.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sections/SurvivalSection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/WidgetActionFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sections/MiningSection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1740">
-              <caret line="130" column="67" selection-start-line="130" selection-start-column="67" selection-end-line="130" selection-end-column="67" />
+            <state relative-caret-position="271">
+              <caret line="97" column="9" lean-forward="true" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -122,7 +103,12 @@
     <findStrings>
       <find>gettutorial</find>
       <find>getTuto</find>
+      <find>import</find>
+      <find>lol</find>
     </findStrings>
+    <replaceStrings>
+      <replace>import</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -134,7 +120,6 @@
         <option value="$PROJECT_DIR$/src/utils/Sleep.java" />
         <option value="$PROJECT_DIR$/src/utils/CachedWidget.java" />
         <option value="$PROJECT_DIR$/src/utils/WidgetActionFilter.java" />
-        <option value="$PROJECT_DIR$/src/sections/SurvivalSection.java" />
         <option value="$PROJECT_DIR$/src/sections/FightingSection.java" />
         <option value="$PROJECT_DIR$/src/sections/MiningSection.java" />
         <option value="$PROJECT_DIR$/src/sections/PriestSection.java" />
@@ -142,18 +127,20 @@
         <option value="$PROJECT_DIR$/src/events/ToggleRoofsHiddenEvent.java" />
         <option value="$PROJECT_DIR$/src/sections/QuestSection.java" />
         <option value="$PROJECT_DIR$/src/sections/WizardSection.java" />
-        <option value="$PROJECT_DIR$/src/sections/RunescapeGuideSection.java" />
         <option value="$PROJECT_DIR$/src/sections/CookingSection.java" />
         <option value="$PROJECT_DIR$/src/sections/TutorialSection.java" />
+        <option value="$PROJECT_DIR$/src/sections/RunescapeGuideSection.java" />
+        <option value="$PROJECT_DIR$/src/events/EnableFixedModeEvent.java" />
+        <option value="$PROJECT_DIR$/src/events/ToggleShiftDropEvent.java" />
         <option value="$PROJECT_DIR$/src/script/Tutorial_Island.java" />
+        <option value="$PROJECT_DIR$/src/sections/SurvivalSection.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1440" />
-    <option name="y" value="-157" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="y" value="23" />
+    <option name="width" value="720" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -163,11 +150,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="TutorialIsland" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TutorialIsland" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TutorialIsland" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TutorialIsland" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TutorialIsland" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TutorialIsland" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TutorialIsland" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TutorialIsland" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
               <item name="TutorialIsland" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -191,6 +197,12 @@
               <item name="TutorialIsland" type="b2602c69:ProjectViewProjectNode" />
               <item name="TutorialIsland" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sections" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TutorialIsland" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TutorialIsland" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -202,7 +214,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,10 +248,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-157" width="1920" height="1057" extended-state="6" />
+    <frame x="0" y="23" width="720" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49948186" visible="true" weight="0.19914803" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49948186" weight="0.25221238" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -255,7 +266,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.4041451" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.40382165" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -269,20 +280,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Tutorial_Island.java" />
-    <entry file="file://$PROJECT_DIR$/src/sections/FightingSection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="134" column="1" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sections/PriestSection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/events/DisableAudioEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -297,21 +294,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sections/QuestSection.java">
+    <entry file="file://$PROJECT_DIR$/src/sections/BankSection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/CachedWidget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sections/WizardSection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sections/TutorialSection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sections/CookingSection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="60">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -321,29 +334,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sections/BankSection.java">
+    <entry file="file://$PROJECT_DIR$/src/sections/PriestSection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+        <state relative-caret-position="885">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sections/RunescapeGuideSection.java">
+    <entry file="file://$PROJECT_DIR$/src/sections/QuestSection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        <state relative-caret-position="570">
+          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/CachedWidget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
@@ -364,53 +370,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sections/WizardSection.java">
+    <entry file="file://$PROJECT_DIR$/src/sections/MiningSection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        <state relative-caret-position="708">
+          <caret line="130" column="67" selection-start-line="130" selection-start-column="67" selection-end-line="130" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sections/FightingSection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../OSBot_2.5.22.jar!/org/osbot/rs07/script/Script.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/TutorialIsland/script/Tutorial_Island.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#1375#1376#0" expanded="true" />
+            <element signature="e#0#3962#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sections/TutorialSection.java">
+    <entry file="file://$PROJECT_DIR$/src/events/EnableFixedModeEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+        <state relative-caret-position="510">
+          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sections/RuneScapeGuideSection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="e#1283#1284#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/events/ToggleShiftDropEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/script/Tutorial_Island.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sections/SurvivalSection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sections/MiningSection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="130" column="67" selection-start-line="130" selection-start-column="67" selection-end-line="130" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/script/Tutorial_Island.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="120" column="43" lean-forward="true" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="271">
+          <caret line="97" column="9" lean-forward="true" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -481,7 +515,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>OSBot_2.5.22</last-edited>
+          <last-edited>osbot_2.5.35</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

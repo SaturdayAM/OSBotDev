@@ -41,7 +41,7 @@ public final class SurvivalSection extends TutorialSection {
                 getTabs().open(Tab.INVENTORY);
                 break;
             case 40:
-                chopTree();
+                fish();
                 break;
             case 50:
                 lightFire();
@@ -94,7 +94,7 @@ public final class SurvivalSection extends TutorialSection {
         NPC fishingSpot = getNpcs().closest("Fishing spot");
         if (fishingSpot != null && fishingSpot.interact("Net")) {
             long rawShrimpCount = getInventory().getAmount("Raw shrimps");
-            Sleep.sleepUntil(() -> getInventory().getAmount("Raw shrimps") > rawShrimpCount, 10_000);
+            Sleep.sleepUntil(() -> getInventory().getAmount("Raw shrimps") > rawShrimpCount, 10_000, 600);
         }
     }
 

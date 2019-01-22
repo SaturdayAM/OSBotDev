@@ -3,7 +3,6 @@
     <output-path>$USER_HOME$/OSBot/Scripts</output-path>
     <root id="archive" name="Tutorial_Island.jar">
       <element id="module-output" name="TutorialIsland" />
-      <element id="library" level="project" name="OSBot_2.5.22" />
     </root>
   </artifact>
 </component>
