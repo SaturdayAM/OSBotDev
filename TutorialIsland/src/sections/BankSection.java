@@ -5,18 +5,22 @@ import org.osbot.rs07.api.filter.PositionFilter;
 import org.osbot.rs07.api.map.Area;
 import org.osbot.rs07.api.map.Position;
 import org.osbot.rs07.api.model.RS2Object;
+import utils.CachedWidget;
 import utils.Sleep;
+import utils.WidgetActionFilter;
 
 import java.util.Arrays;
 import java.util.List;
 
 public final class BankSection extends TutorialSection {
 
+    private final CachedWidget accountManagementWidget = new CachedWidget(new WidgetActionFilter(
+                                                                     "Account Management"));
     private static final Area BANK_AREA = new Area(
-            new int[][]{
-                    {3125, 3121},
-                    {3126, 3121},
-                    {3126, 3119},
+            new int[][]{ //Syntax for declaring 2d array
+                    {3125, 3121}, //BANK_AREA[0] = [3125, 3121]
+                    {3126, 3121}, //BANK_AREA[1] = [3126, 3121]
+                    {3126, 3119}, //          ...
                     {3118, 3119},
                     {3118, 3121},
                     {3119, 3121},
@@ -46,9 +50,14 @@ public final class BankSection extends TutorialSection {
     );
 
     public BankSection() {
-        super("Financial Advisor");
+        super("Account Guide");
     }
 
+    /******************************************************************************
+     *                                                                            *
+     *                     Bank Section Main Loop                                 *
+     *                                                                            *
+     *****************************************************************************/
     @Override
     public final void onLoop() throws InterruptedException {
         if (pendingContinue()) {
@@ -65,7 +74,7 @@ public final class BankSection extends TutorialSection {
                 } else if (getDialogues().isPendingOption()) {
                     getDialogues().selectOption("Yes.");
                 } else if (getObjects().closest("Bank booth").interact("Use")) {
-                    Sleep.sleepUntil(this::pendingContinue, 5000);
+                    Sleep.sleepUntil(this::pendingContinue, 5000, 600);
                 }
                 break;
             case 520:
@@ -77,22 +86,43 @@ public final class BankSection extends TutorialSection {
                 break;
             case 525:
                 if (getWidgets().closeOpenInterface() && openDoorAtPosition(new Position(3125, 3124, 0))) {
-                    Sleep.sleepUntil(() -> getProgress() != 525, 5000);
+                    Sleep.sleepUntil(() -> getProgress() != 525, 5000, 600);
                 }
                 break;
             case 530:
                 talkToInstructor();
                 break;
+            case 531:
+                openAccountManagementTab();
+                break;
+            case 532:
+                talkToInstructor();
+                break;
             case 540:
                 if (openDoorAtPosition(new Position(3130, 3124, 0))) {
-                    Sleep.sleepUntil(() -> getProgress() != 540, 5000);
+                    Sleep.sleepUntil(() -> getProgress() != 540, 5000, 600);
                 }
                 break;
         }
     }
 
+    /******************************************************************************
+     *                                                                            *
+     *                         Bank Section Helper Methods                        *
+     *                                                                            *
+     *****************************************************************************/
+
     private boolean openDoorAtPosition(final Position position) {
         RS2Object door =  getObjects().closest(obj -> obj.getName().equals("Door") && obj.getPosition().equals(position));
         return door != null && door.interact("Open");
     }
+
+    private void openAccountManagementTab(){
+        if(accountManagementWidget.get(getWidgets()).isPresent() &&
+           accountManagementWidget.get(getWidgets()).get().interact()){
+            Sleep.sleepUntil(() -> getProgress() == 532, 5000, 600);
+        }
+    }
+
+
 }

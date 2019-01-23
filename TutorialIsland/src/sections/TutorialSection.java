@@ -23,9 +23,9 @@ public abstract class TutorialSection extends MethodProvider {
         return getConfigs().get(281);
     }
 
-    protected final void talkToInstructor() {
+    protected final void talkToInstructor() { //Inherited function to talk to instructors
         if (getInstructor().interact("Talk-to")) {
-            Sleep.sleepUntil(this::pendingContinue, 5000);
+            Sleep.sleepUntil(this::pendingContinue, 5000, 600);
         }
     }
 

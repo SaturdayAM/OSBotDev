@@ -32,7 +32,7 @@ public class CookingSection extends TutorialSection {
             case 130:
                 if (getWalking().walkPath(PATH_TO_COOK_BUILDING)) {
                     if (getDoorHandler().handleNextObstacle(COOK_BUILDING)) {
-                        Sleep.sleepUntil(() -> getProgress() == 140, 5000);
+                        Sleep.sleepUntil(() -> getProgress() == 140, 5000, 600);
                     }
                 }
                 break;
@@ -46,11 +46,8 @@ public class CookingSection extends TutorialSection {
                 bakeDough();
                 break;
             case 170:
-                getTabs().open(Tab.MUSIC);
-                break;
-            case 180:
                 if (getDoorHandler().handleNextObstacle(new Position(3071, 3090, 0))) {
-                    Sleep.sleepUntil(() -> getProgress() != 180, 5000);
+                    Sleep.sleepUntil(() -> getProgress() != 170, 5000, 600);
                 }
                 break;
         }

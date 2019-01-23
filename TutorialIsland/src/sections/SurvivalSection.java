@@ -44,13 +44,13 @@ public final class SurvivalSection extends TutorialSection {
                 fish();
                 break;
             case 50:
-                lightFire();
-                break;
-            case 60:
                 getTabs().open(Tab.SKILLS);
                 break;
-            case 70:
+            case 60:
                 talkToInstructor();
+                break;
+            case 70:
+                chopTree();
                 break;
             case 80:
             case 90:
@@ -58,23 +58,25 @@ public final class SurvivalSection extends TutorialSection {
             case 110:
                 if (getTabs().getOpen() != Tab.INVENTORY) {
                     getTabs().open(Tab.INVENTORY);
-                } else if (getInventory().getAmount(item -> item.getName().contains("shrimp")) < 2) {
+                } else if (!getInventory().contains("Raw shrimps")) {
                     fish();
-                } else if (getObjects().closest("Fire") == null) {
-                    if (!getInventory().contains("Logs")) {
+                } else if (getObjects().closest("Fire") == null ||
+                           getWidgets().getWidgetContainingText("time to lite a fire") != null){
+                    //no fire around, need to light fire
+                    if (!getInventory().contains("Logs")) { //need logs
                         chopTree();
-                    } else {
+                    } else { //can light fire
                         lightFire();
                     }
-                } else {
+                } else { //fire present, can cook
                     cook();
                 }
                 break;
-            case 120:
+            case 120: //move to next section
                 RS2Object gate = getObjects().closest("Gate");
-                if (gate != null) {
+                if (gate != null && gate.isVisible()) {
                     if (gate.interact("Open")){
-                        Sleep.sleepUntil(() -> getProgress() == 130, 5000);
+                        Sleep.sleepUntil(() -> getProgress() == 130, 5000, 600);
                     }
                 } else {
                     getWalking().walkPath(PATH_TO_GATE);
@@ -86,7 +88,7 @@ public final class SurvivalSection extends TutorialSection {
     private void chopTree() {
         Entity tree = getObjects().closest("Tree");
         if (tree != null && tree.interact("Chop down")) {
-            Sleep.sleepUntil(() -> getInventory().contains("Logs") || !tree.exists(), 10_000);
+            Sleep.sleepUntil(() -> getInventory().contains("Logs") || !tree.exists(), 10_000, 600);
         }
     }
 

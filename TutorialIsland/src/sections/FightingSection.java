@@ -20,6 +20,12 @@ public final class FightingSection extends TutorialSection {
         super("Combat Instructor");
     }
 
+    /******************************************************************************
+     *                                                                            *
+     *                     Fighting Section Main Loop                             *
+     *                                                                            *
+     *****************************************************************************/
+
     @Override
     public final void onLoop() throws InterruptedException {
         if (pendingContinue()) {
@@ -31,13 +37,13 @@ public final class FightingSection extends TutorialSection {
             case 370:
                 talkToInstructor();
                 break;
-            case 390:
+            case 390: //Need to view equipment screen
                 getTabs().open(Tab.EQUIPMENT);
                 break;
-            case 400:
+            case 400: //Close the equipment screen
                 VIEW_EQUIPMENT_STATS_WIDGET.get(getWidgets()).ifPresent(widget -> {
                     if (widget.interact()) {
-                        Sleep.sleepUntil(() -> getProgress() != 400, 3000);
+                        Sleep.sleepUntil(() -> getProgress() != 400, 3000, 600);
                     }
                 });
                 break;
@@ -48,6 +54,7 @@ public final class FightingSection extends TutorialSection {
                 talkToInstructor();
                 break;
             case 420:
+                //wield bronze sword and wooden shield
                 if (!getEquipment().isWearingItem(EquipmentSlot.WEAPON, "Bronze sword")) {
                     wieldItem("Bronze sword");
                 } else if (!getEquipment().isWearingItem(EquipmentSlot.SHIELD, "Wooden shield")) {
@@ -89,13 +96,22 @@ public final class FightingSection extends TutorialSection {
                 if (!LADDER_AREA.contains(myPosition())) {
                     getWalking().walk(LADDER_AREA);
                 } else if (getObjects().closest("Ladder").interact("Climb-up")) {
-                    Sleep.sleepUntil(() -> !LADDER_AREA.contains(myPosition()), 5000);
+                    Sleep.sleepUntil(() -> !LADDER_AREA.contains(myPosition()), 5000, 600);
                 }
                 break;
         }
     }
 
+
+   /******************************************************************************
+    *                                                                            *
+    *                     Fighting Section Helper Methods                        *
+    *                                                                            *
+    *****************************************************************************/
+
     private boolean inRatCage() {
+        //Returns true, in rat cage, if you cant reach the Combat Instructor
+        //from current position
         return !getMap().canReach(getNpcs().closest("Combat Instructor"));
     }
 
@@ -116,19 +132,21 @@ public final class FightingSection extends TutorialSection {
     }
 
     private boolean isAttackingRat() {
-        return myPlayer().getInteracting() != null && myPlayer().getInteracting().getName().equals("Giant rat");
+        return myPlayer().getInteracting() != null &&
+               myPlayer().getInteracting().getName().equals("Giant rat");
     }
 
     private void attackRat() {
         //noinspection unchecked
-        NPC giantRat = getNpcs().closest(npc -> npc.getName().equals("Giant rat") && npc.isAttackable());
+        NPC giantRat = getNpcs().closest(npc -> npc.getName().equals("Giant rat") &&
+                       npc.isAttackable());
         if (giantRat != null && giantRat.interact("Attack")) {
-            Sleep.sleepUntil(() -> myPlayer().getInteracting() != null, 5000);
+            Sleep.sleepUntil(() -> myPlayer().getInteracting() != null, 5000, 600);
         }
     }
 
     private void wieldItem(String name) {
-        if (getInventory().getItem(name).interact("Wield")) {
+        if (getInventory().getItem(name).interact("Wield", "Equip")) {
             Sleep.sleepUntil(() -> getEquipment().contains(name), 1500);
         }
     }

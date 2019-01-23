@@ -112,7 +112,7 @@ public final class Tutorial_Island extends Script {
 
     private int getTutorialSection() {
         //from osbot class MethodProvider
-        log("getTutorialSection()" + getConfigs().get(406));
+        log("getTutorialSection(): " + getConfigs().get(406));
         return getConfigs().get(406);
     }
 
