@@ -29,11 +29,11 @@ Information on the scripts and any current issues.
 ### GoblinSlayer
 ### SeagullSlayer
 ### TutorialIsland
-Current known bugs:
-
-`TutorialIsland` 
-  * Currently spam toggles run button after finishing cooking section
-  * Does not loggout after completing the tutorial and getting to Lumbridge
+*Current known issues:*
+```
+ 1.) Spam toggles run button after finishing cooking section
+ 2.) Does not loggout after completing the tutorial and getting to Lumbridge
+```
 ### WoodCutter
 
 
