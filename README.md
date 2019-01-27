@@ -6,16 +6,15 @@
 
 - [About This Project](#about-this-project)
 - [Scripts](#scripts)
-  - [CowSlayer](#snake)
-  - [2048](#2048)
-  - [Praise the Sun](#praise-the-sun)
-  - [snake](#snake)
-  - [2048](#2048)
-  - [Praise the Sun](#praise-the-sun)
-- [Known Issues](#known-issues)
+  - [CowSlayer](#cowslayer)
+  - [Fisher](#fisher)
+  - [GoblinSlayer](#goblinslayer)
+  - [SeagullSlayer](#seagullslayer)
+  - [TutorialIsland](#tutorialisland)
+  - [WoodCutter(#woodcutter)
 - [Sending Feedback](#sending-feedback)
 
-## About Reactive Games
+## About This Project
 
 An assortment of scripts for the OSBot client, created for 
 educational purposes. Some are adaptations of existing open source
@@ -25,16 +24,18 @@ scripts created by members of the community.
 
 Information on the scripts and any current issues.
 
-### Snake
-### 2048
-### Praise the Sun
-
-## Known Issues
-
+### CowSlayer
+### Fisher
+### GoblinSlayer
+### SeagullSlayer
+### TutorialIsland
 Current known bugs:
 
-`Praise the Sun` 
-  * Levels 8 and 10 have inacessible floor tiles. - Fixed
+`TutorialIsland` 
+  * Currently spam toggles run button after finishing cooking section
+  * Does not loggout after completing the tutorial and getting to Lumbridge
+### WoodCutter
+
 
 
 ## Sending Feedback
