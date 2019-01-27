@@ -11,7 +11,7 @@
   - [GoblinSlayer](#goblinslayer)
   - [SeagullSlayer](#seagullslayer)
   - [TutorialIsland](#tutorialisland)
-  - [WoodCutter(#woodcutter)
+  - [WoodCutter](#woodcutter)
 - [Sending Feedback](#sending-feedback)
 
 ## About This Project
