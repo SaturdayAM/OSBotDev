@@ -28,7 +28,18 @@ Information on the scripts and any current issues.
 ### Fisher
 ### GoblinSlayer
 ### SeagullSlayer
+
+Kills seagulls non-stop at Port Sarim docks.
+
+*Current known issues:*
+```
+ 1.) Needs to be walked all the way to port manually. 
+```
+
 ### TutorialIsland
+
+Completes tutorial island.
+
 *Current known issues:*
 ```
  1.) Spam toggles run button after finishing cooking section
@@ -36,7 +47,12 @@ Information on the scripts and any current issues.
 ```
 ### WoodCutter
 
+Cuts trees and then oaks near the Varrock west bank.
 
+*Current known issues:*
+```
+1.) Does not detect if axe is present.
+```
 
 ## Sending Feedback
 

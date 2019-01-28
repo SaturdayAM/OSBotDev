@@ -3,7 +3,6 @@
     <output-path>$USER_HOME$/OSBot/Scripts</output-path>
     <root id="archive" name="WoodCutter.jar">
       <element id="module-output" name="WoodCutter" />
-      <element id="library" level="project" name="OSBot_2.5.18" />
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
       </element>
