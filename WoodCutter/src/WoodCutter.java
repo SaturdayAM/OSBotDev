@@ -21,7 +21,7 @@ public class WoodCutter extends Script {
 
     @Override
     public void onStart() throws InterruptedException {
-        location = "VARROCK_WEST";
+        location = "LUMBRIDGE";
         log("WoodCutter.onStart(). Location: " + location);
 
     }
@@ -97,15 +97,26 @@ public class WoodCutter extends Script {
     }
 
     private void walkToTreeArea(){
-        //Varrock West Bank location
-        int x1 = random(3169, 3173);
-        int y1 = random(3422, 3427);
-        int x2 = random(3157, 3161);
-        int y2 = random(3397, 3401);
 
-        //Center of tree area at Varrock
-        //Position treeCenter = new Position(3163, 3412, 0); //what looks to be center tile of spot
-        Position randomCenter =  new Position(random(3161,3165), random(3410, 3415), 0);
+
+
+        Position randomCenter;
+
+        switch(location){
+            case "VARROCK_WEST":
+                //Center of tree area at Varrock
+                //Position treeCenter = new Position(3163, 3412, 0);
+                randomCenter = new Position(random(3160,3166), random(3409, 3415), 0);
+                break;
+            case "LUMBRIDGE":
+                //Center of tree area at Lumbridge
+                //Position treeCenter = new Position (3188, 3243, 0);
+                randomCenter = new Position(random(3185,3191), random(3240, 3246), 0);
+                break;
+            default:
+                //Default is VARROCK_WEST
+                randomCenter = new Position(random(3160,3166), random(3409, 3415), 0);
+        }
 
         getWalking().webWalk(randomCenter);
     }
@@ -114,8 +125,10 @@ public class WoodCutter extends Script {
         if(location == "VARROCK_WEST"){
             log("WoodCutter.getTreeArea(): Location = " + location );
             return new Area(3171, 3425, 3159, 3399);
+        } else if(location == "LUMBRIDGE"){
+            return new Area(3182, 3235, 3193, 3256);
         }
-        return new Area(3171, 3425, 3159, 3399);
+        return new Area(3171, 3425, 3159, 3399); //VARROCK_WEST by default
     }
 
     private String getTreeName() {
